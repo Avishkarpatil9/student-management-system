@@ -2,6 +2,8 @@
 
 Full-stack CRUD application built with Node.js, Express, PostgreSQL, React, and Bootstrap.
 
+📺 **[Watch Project Presentation on Loom](https://www.loom.com/share/7b16731989934c64bc141562fe977121)**
+
 ## Project Structure
 
 ```
