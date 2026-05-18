@@ -1,0 +1,132 @@
+{
+	"info": {
+		"name": "Student Management System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": [""]
+				}
+			}
+		},
+		{
+			"name": "Get All Students (Page 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/students?page=1&limit=5",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": ["api", "students"],
+					"query": [
+						{ "key": "page", "value": "1" },
+						{ "key": "limit", "value": "5" }
+					]
+				}
+			}
+		},
+		{
+			"name": "Get All Students (Page 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/students?page=2&limit=5",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": ["api", "students"],
+					"query": [
+						{ "key": "page", "value": "2" },
+						{ "key": "limit", "value": "5" }
+					]
+				}
+			}
+		},
+		{
+			"name": "Get Student by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/students/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": ["api", "students", "1"]
+				}
+			}
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Arjun\",\n    \"last_name\": \"Verma\",\n    \"email\": \"arjun.verma@example.com\",\n    \"dob\": \"2001-06-10\",\n    \"marks\": [\n        { \"subject\": \"Mathematics\", \"mark\": 88 },\n        { \"subject\": \"Science\", \"mark\": 92 },\n        { \"subject\": \"English\", \"mark\": 75 }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/students",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": ["api", "students"]
+				}
+			}
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Arjun\",\n    \"last_name\": \"Verma Updated\",\n    \"email\": \"arjun.updated@example.com\",\n    \"dob\": \"2001-06-10\",\n    \"marks\": [\n        { \"subject\": \"Mathematics\", \"mark\": 95 },\n        { \"subject\": \"Science\", \"mark\": 88 }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/students/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": ["api", "students", "1"]
+				}
+			}
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/students/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "5000",
+					"path": ["api", "students", "1"]
+				}
+			}
+		}
+	]
+}
